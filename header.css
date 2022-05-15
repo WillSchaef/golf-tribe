@@ -42,6 +42,7 @@ header:not(.scrolled) .header-leftContent {
 }
 header.scrolled .header-leftContent {
     pointer-events: visible;
+    min-height: 78px;
 }
 .leftContent-contact {
     display: none;

@@ -46,7 +46,7 @@
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, .5);
 }
-.card:hover {
+.card-container:not(.popupOpened) .card:hover {
     border: 2px solid rgba(255, 255, 255, .75);
     box-shadow: 5px 2px 25px 10px rgb(255 255 255 / 7%);
 }
@@ -80,7 +80,7 @@
     z-index: 1;
 }
   
-.card:hover:before {
+.card-container:not(.popupOpened) .card:hover:before {
     clip-path: circle(300px at 80% -20%);
     opacity: .8;
 }
@@ -111,9 +111,10 @@
     width: 100%;
     height: 220px;
     transition: 0.5s;
+    pointer-events: none;
   }
   
-.card-container .card:hover .imgBx {
+.card-container:not(.popupOpened) .card:hover .imgBx {
     top: 5%;
     transform: translateY(0%);
       
@@ -132,6 +133,7 @@
 
 .card1 .imgBx img {
     max-width: 165px;
+    margin-left: 10px;
 }
 
 .card-container .card .contentBx {
@@ -144,7 +146,7 @@
     z-index: 10;
 }
   
-.card:hover .contentBx {
+.card-container:not(.popupOpened) .card:hover .contentBx {
     height: 200px;
 }
   
@@ -237,8 +239,75 @@
 .card:hover .contentBx .gt-btn {
     transition: background-color .3s, color .3s, box-shadow .3s, transform .3s;
 }
-.not-sure {
-    display: none;
-    justify-content: center;
-    margin-top: 50px;
+.popuptext h3 {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+
+/* MODALS */
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+/* The actual popup (appears on top) */
+.popup .popuptext {
+visibility: hidden;
+width: 100%;
+max-width: 500px;
+height: 450px;
+border: 2px solid rgba(255, 255, 255, .4);
+background-color: var(--light-gray);
+color: var(--light-color);
+text-align: center;
+padding: 8px 0;
+position: absolute;
+z-index: 10000000;
+bottom: 50%;
+left: 50%;
+transform: translate(-50%, 50%);
+}
+
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+visibility: visible;
+-webkit-animation: fadeIn .5s;
+animation: fadeIn .5s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+
+@media (max-width: 767px) {
+    .card-container1 .popuptext, .card-container3 .popuptext {
+        border-radius:0 35px 35px 0;
+    }
+    
+    .card-container2 .popuptext {
+        border-radius: 35px 0 0 35px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-container1 .popuptext {
+        border-radius: 35px 0 0 35px;
+    }
+    
+    .card-container3 .popuptext {
+        border-radius: 0 35px 35px 0;
+    }
 }

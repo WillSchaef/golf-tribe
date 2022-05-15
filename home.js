@@ -32,3 +32,25 @@ document.addEventListener('DOMContentLoaded', () => {
       tabContainer.querySelector('.tab-sidebar .tab').click();
   }); 
 });
+
+
+
+// Modal popups
+
+function modalFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+    popup.parentElement.classList.toggle('popupOpened');
+  }
+
+function modalFunction2() {
+var popup = document.getElementById("myPopup2");
+popup.classList.toggle("show");
+popup.parentElement.classList.toggle('popupOpened');
+}
+
+function modalFunction3() {
+var popup = document.getElementById("myPopup3");
+popup.classList.toggle("show");
+popup.parentElement.classList.toggle('popupOpened');
+}
