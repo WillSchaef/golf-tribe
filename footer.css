@@ -31,8 +31,13 @@ footer .content-container {
 footer h5, footer p {
     margin: 10px 0px;
 }
+footer p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
 footer h5 {
     font-size: 3rem;
+    font-family: 'Chakra Petch', sans-serif;
 }
 footer .fab {
     opacity: .7;

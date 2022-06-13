@@ -7,6 +7,8 @@
 // // ------------------------------------------------------------------
 //Get Height of header
 //Used for anchor support
+
+// This
 function getHeaderHeight(){
     var headerHeight = document.querySelector('header.gt-header').offsetHeight;
     if (window.matchMedia('(max-width: 992px)').matches) {
@@ -26,6 +28,7 @@ function getHeaderHeight(){
   
   //Anchor tag implementation
   //On click of anchor tag
+  // this
   $('a[href*="#"]:not([href="#"])').click(function (e) {
     var urlPath = this.href.substring(0, this.href.indexOf("#")); //url wthout hash
     var locationPath = location.href;
@@ -57,6 +60,8 @@ function getHeaderHeight(){
 //     }
 //   });
   
+
+
   //On load of site going to the anchor tag
   $(window).on('pageshow',function(){ 
     var hash = window.location.hash

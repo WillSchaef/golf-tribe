@@ -1,3 +1,7 @@
+.member-intro {
+    width: 60%;
+}
+
 .grid {
     display: flex;
     flex-direction: column;
@@ -188,7 +192,7 @@ hr {
     margin: 25px 0;
     list-style-position: inside;
     padding-left: 0px;
-    min-height: 84px;
+    min-height: 90px;
 }
 .features-container {
     display: flex;
@@ -235,13 +239,52 @@ hr {
     opacity: 1;
     transition: all .2s ease;
 }
+
+.pricing .btn {
+    max-width: 300px;
+    margin-top: 50px;
+}
 .third-grid .btn {
     margin-top: 20px;
 }
-.btn:hover {
+.btn:hover, .btn:active, .btn:focus {
     color: white;
     opacity: 1;
     background-color: var(--special-color);
     box-shadow: 0px 0px var(--transparent) !important;
     transform: translateY(4px);
+}
+
+
+
+
+
+/* PRICING */
+
+.pricing, .pricing section {
+    background-color:rgba(0, 0, 0, 0);
+}
+.pricing .overlay {
+    background-image: linear-gradient(rgba(14, 14, 16, 1), rgba(14, 14, 16, .5), rgba(14, 14, 16, .8));
+}
+@media (max-width: 768px) {
+    .pricing {
+        background-image: url(./IMG_0488.jpg);
+        background-position: 35% center;
+    }
+    .pricing .overlay {
+        background-image: linear-gradient(rgba(14, 14, 16, 1), rgba(14, 14, 16, .6), rgba(14, 14, 16, 1));
+    }
+}
+.pricing .content-container {
+    padding-bottom: 100px;
+}
+.pricing .content-container-inner {
+    width: 100%;
+}
+
+@media (min-width: 992px){
+    .pricing .content-container-inner {
+        width: 90%;
+    }
 }
