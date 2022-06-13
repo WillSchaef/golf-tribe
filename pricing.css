@@ -1,5 +1,15 @@
 .member-intro {
-    width: 60%;
+    width: 89%;
+    margin: 0 auto;
+}
+.member-intro p {
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .member-intro {
+        width: 60%;
+    }
 }
 
 .grid {
@@ -241,7 +251,7 @@ hr {
 }
 
 .pricing .btn {
-    max-width: 300px;
+    width: 300px;
     margin-top: 50px;
 }
 .third-grid .btn {

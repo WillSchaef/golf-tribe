@@ -1,3 +1,8 @@
+.pt-cards .content-container-inner p {
+    text-align: left;
+}
+
+
 /* PRACTICE AND TRAINING CARDS */
 .play-train-cards {
     display: flex;
@@ -255,7 +260,6 @@
 .popup .popuptext {
 opacity: 0;
 width: 100%;
-max-width: 500px;
 height: 450px;
 border: 2px solid rgba(255, 255, 255, .4);
 background-color: var(--light-gray);
@@ -282,9 +286,48 @@ pointer-events: none;
 }
 .popuptext ul {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    padding: 0 10px 0 30px;
     list-style-type: square;
 }
+
+@media (min-width: 568px) {
+    .popuptext ul {
+        font-size: 1.4rem;
+        padding: 0 20px 0 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .popuptext ul {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 848px) {
+    .popuptext ul {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .popuptext ul {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .popuptext ul {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .popuptext ul {
+        font-size: 1.5rem;
+    }
+}
+
 .popuptext li {
     margin: 10px 0;
 }
