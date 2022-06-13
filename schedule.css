@@ -8,12 +8,12 @@
     padding-top: 0;
     padding-bottom: 50px;
     max-width: 1000px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .schedule h1 {
     text-align: center;
     background-color: transparent;
-    padding: 50px 0;
+    padding-top: 50px;
     font-family: 'Chakra Petch', sans-serif;
 }
 .schedule .overlay {
