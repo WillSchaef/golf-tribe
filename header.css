@@ -6,6 +6,27 @@ header {
     width: 100%;
     z-index: 9999999;
 }
+.subpage header {
+    position: sticky;
+}
+header:not(.scrolled) .header-overlay {
+    background: rgba(255,255,255,0);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0%);
+    transition: all .6s ease-in-out;
+}
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.scrolled, .subpage header {
+    width: 100%;
+    background-color: var(--dark-green);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
+    transition: all .4s ease-in-out;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.scrolled + .content {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+}
+
 .header-overlay {
     background: rgba(90, 102, 35, 0);
     transition: background .7s ease;
@@ -40,11 +61,15 @@ header {
 header:not(.scrolled) .header-leftContent {
     pointer-events: none;
 }
-header.scrolled .header-leftContent {
+header.scrolled .header-leftContent, .subpage header .header-leftContent {
     pointer-events: visible;
+    min-height: 78px;
 }
 .leftContent-contact {
     display: none;
+}
+.leftContent-contact p {
+    font-size: 1.2rem;
 }
 
 @media (min-width: 1200px) {
@@ -90,7 +115,7 @@ header:not(.scrolled) .leftContent-contact {
     opacity: 0;
     transition: all .7s ease-in-out;
 }
-header.scrolled .leftContent-contact {
+header.scrolled .leftContent-contact, .subpage header .leftContent-contact {
     opacity: 1;
     transition: all .7s ease-in-out;
 }
@@ -184,7 +209,7 @@ header.scrolled .shop-nav-item {
 header:not(.scrolled) .logo-nav-item {
     pointer-events: none;
 }
-header.scrolled .logo-nav-item {
+header.scrolled .logo-nav-item, .subpage header .logo-nav-item {
     pointer-events: visible;
 }
 
@@ -254,6 +279,36 @@ header.scrolled .logo-link img {
     header.scrolled .logo-link img {
         min-width: 60px;
         transition: all .5s ease-in-out;
+    }
+}
+
+header.scrolled .logo-link, header.scrolled .logo-nav-item, header.scrolled .logo-link img, .subpage header .logo-link img, .subpage .logo-link, .subpage .logo-nav-item {
+    max-width: 45px;
+    opacity: 1;
+}
+
+@media (min-width: 568px) {
+    header.scrolled .logo-link, header.scrolled .logo-nav-item, header.scrolled .logo-link img, .subpage header .logo-link img, .subpage .logo-link, .subpage .logo-nav-item {
+        max-width: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    header.scrolled .logo-link, header.scrolled .logo-nav-item, header.scrolled .logo-link img, .subpage header .logo-link img, .subpage .logo-link, .subpage .logo-nav-item {
+        max-width: 65px;
+    }
+}
+
+header:not(.scrolled) .logo-nav-item {
+    margin: 0px;
+}
+
+@keyframes logo-link {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -368,9 +423,10 @@ header:not(.scrolled) div[role*=navigation] {
     transition: all .6s ease-in-out;
     pointer-events: none;
 }
-header.scrolled div[role*=navigation] {
+header.scrolled div[role*=navigation], .subpage header div[role*=navigation] {
     opacity: 1;
     transition: all .6s ease-in-out;
+    pointer-events: all;
 }
 div[role*=navigation] {
     display: flex;
@@ -430,15 +486,15 @@ header:not(.scrolled) .bottom {
     opacity: 0;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity .2s ease-in-out;
 }
-header.scrolled .top {
+header.scrolled .top, .subpage header .top {
     opacity: 1;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity .2s ease-in-out;
 }
-header.scrolled .middle {
+header.scrolled .middle, .subpage header .middle {
     opacity: 1;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity .4s ease-in-out;
 }
-header.scrolled .bottom {
+header.scrolled .bottom, .subpage header .bottom {
     opacity: 1;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity .6s ease-in-out;
 }
@@ -486,6 +542,15 @@ header.scrolled .bottom {
     color: var(--light-color);
     transition: all .3s ease;
 }
+@media (min-width: 992px) {
+    .mapNav, .emailNav, .loginNav {
+        display: none;
+    }
+    .pricingNav li {
+        border-bottom-left-radius: 15px;
+    }
+}
+
 #menu a:last-child li {
     margin-bottom: 15px;
 }
@@ -496,7 +561,7 @@ header.scrolled .bottom {
     right: 0;
 }
 
-header:not(.scrolled) #menuToggle input:checked ~ ul {
+body:not(.subpage) header:not(.scrolled) #menuToggle input:checked ~ ul {
     right: -45%;
     transition: right 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }

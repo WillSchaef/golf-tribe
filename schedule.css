@@ -1,0 +1,31 @@
+.schedule {
+    height: auto !important;
+    overflow: hidden;
+    background-image: url(./IMG_0360.jpg);
+}
+.schedule .content-container {
+    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 50px;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+.schedule h1 {
+    text-align: center;
+    background-color: transparent;
+    padding-top: 50px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.schedule .overlay {
+    background-color: rgba(0, 0, 0, .7);
+}
+@media (min-width: 684px) {
+    .calendly-inline-widget {
+        height: 585px !important;
+    }
+}
+@media (min-width: 1052px) {
+    .calendly-inline-widget {
+        height: 650px !important;
+    }
+}

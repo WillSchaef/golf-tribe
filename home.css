@@ -1,54 +1,52 @@
-.homepage {
-    opacity: 1;
-    transition: 1s opacity;
-  }
-.homepage.fade-out {
-    opacity: 0;
-    transition: all .5s ease;
-}
-header:not(.scrolled) .header-overlay {
-    background: rgba(255,255,255,0);
-    box-shadow: 0 2px 5px rgb(0 0 0 / 0%);
-    transition: all .6s ease-in-out;
-}
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.scrolled {
-    width: 100%;
-    background-color: var(--dark-green);
-    box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
-    transition: all .4s ease-in-out;
-}
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.scrolled + .content {
-    background-color: rgba(0, 0, 0, 0);
-    padding: 10px;
-}
-header.scrolled .logo-link, header.scrolled .logo-nav-item, header.scrolled .logo-link img {
-    max-width: 45px;
-    opacity: 1;
+h1 {
+    text-align: center;
+    color: rgba(255, 255, 255, .8);
+    font-size: 2rem;
+    margin: 75px 0px 10px 0;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 @media (min-width: 568px) {
-    header.scrolled .logo-link, header.scrolled .logo-nav-item, header.scrolled .logo-link img {
-        max-width: 50px;
+    h1 {
+        font-size: 3rem;
     }
 }
 
-@media (min-width: 768px) {
-    header.scrolled .logo-link, header.scrolled .logo-nav-item, header.scrolled .logo-link img {
-        max-width: 65px;
+@media (min-width: 992px) {
+    h1 {
+        font-size: 3.5rem;
     }
 }
 
-header:not(.scrolled) .logo-nav-item {
-    margin: 0px;
+
+.scrollIn .scroll-content {
+    opacity: 0;
+    transition: transform .6s ease-in-out, opacity .7s ease-in-out;
+    transition-delay: .1s;
+    overflow-y: hidden;
+    transform: translateY(50px) scale(.97);
+}
+.scrollIn.visible .scroll-content {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
-@keyframes logo-link {
-    from {opacity: 0;}
-    to {opacity: 1;}
+.parallax-mirror, .parallax-slider {
+    height: 100vh;
+    transform: none;
+    position: relative;
 }
-  
+
+.parallax-slider[src*="./IMG_0486.jpg"] {
+    filter: grayscale(100%);
+}
+.pricing.scrollIn .scroll-content {
+    transform: translateY(50px) scale(.93);
+}
+.pricing.scrollIn.visible .scroll-content {
+    transform: translateY(0) scale(1)
+}
+
   /* The element to apply the animation to */
 .logo-link {
     animation-name: logo-link;
@@ -66,11 +64,18 @@ header:not(.scrolled) .logo-nav-item {
 .hero .overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .5);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .7);
 }
 .body-logo, .body-logo-link {
     width: 100%;
@@ -82,6 +87,13 @@ header:not(.scrolled) .logo-nav-item {
     opacity: .6;
     transition: opacity .4s cubic-bezier(0.34, 0.32, 0.58, 1), width .5s ease-in-out, max-width .5s ease-in-out;
 }
+
+@media (min-width: 768px) {
+    .body-logo, .body-logo-link {
+        max-width: 200px;
+    }
+}
+
 .body-logo {
     max-width: 300px;
     -webkit-touch-callout: none; /* iOS Safari */
@@ -102,14 +114,14 @@ section.s-scrolled .body-logo, section.s-scrolled .body-logo-link {
     transition: all .7s ease-in-out;
 }
 .body-logo:hover, .body-logo-link:hover, .body-logo:hover img {
-    opacity: .9;
+    opacity: .9 !important;
 }
 .body-logo h1, .body-logo-innerBottom p {
     color: rgb(255, 255, 255, .6);
     line-height: 1;
 }
 .body-logo:hover h1, .body-logo-innerBottom p {
-    color: rgb(255, 255, 255, .9);
+    color: rgb(255, 255, 255, .9) !important;
 }
 .body-logo h1:hover .body-logo{ 
     opacity: .9;
@@ -121,12 +133,12 @@ section.s-scrolled .body-logo h1, section.s-scrolled .body-logo-innerBottom p {
     transition: all .7s ease-in-out;
 } 
 section:not(.s-scrolled) .body-logo h1 {
-    font-size: 3rem;
+    font-size: 6rem;
     opacity: 1;
     transition: all .5s ease-in-out;
 }
 section:not(.s-scrolled) .body-logo-innerBottom p  {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     opacity: 1;
     transition: all .5s ease-in-out;
@@ -175,6 +187,28 @@ section:not(.s-scrolled) .body-logo-innerBottom p  {
     }
 }
 
+.jump-item {
+    transform: translateY(-70px);
+}
+
+@media (min-width: 992px) {
+    .jump-item {
+        transform: translateY(-76px);
+    }
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .member {
+        display: none;
+    }
+}
+.pt-cards .scroll-content {
+    transition-delay: .3s;
+}
+
 .about {
     border-top: 2px solid var(--medium-green);
     text-align: center;
@@ -183,53 +217,3 @@ section:not(.s-scrolled) .body-logo-innerBottom p  {
     padding-top: 100px;
 }
 
-
-/* TAB SECTION */
-
-.divider .content-container-inner {
-    width: 100%;
-}
-.technology-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 30px 0px 20px 0px;
-}
-@media (min-width: 992px) {
-    .technology-container {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    .divider .content-container-inner {
-        width: 90%;
-    }
-}
-   
-
-
-/* PRICING SECTION */
-
-.pricing {
-    background-color:rgba(0, 0, 0, 0);
-}
-@media (max-width: 991px) {
-    .pricing {
-        background: url('./pricing-cards-bw.jpg') no-repeat center!important;
-    }
-}
-.pricing .overlay {
-    background-image: linear-gradient(rgba(14, 14, 16, 1), rgba(14, 14, 16, .2), rgba(14, 14, 16, .6));
-}
-.pricing .content-container {
-    padding-bottom: 100px;
-}
-.pricing .content-container-inner {
-    width: 100%;
-}
-
-@media (min-width: 992px){
-    .pricing .content-container-inner {
-        width: 90%;
-    }
-}
