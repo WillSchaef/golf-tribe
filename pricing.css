@@ -2,9 +2,6 @@
     width: 89%;
     margin: 0 auto;
 }
-.member-intro p {
-    text-align: left;
-}
 
 @media (min-width: 992px) {
     .member-intro {
