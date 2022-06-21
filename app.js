@@ -31,7 +31,7 @@ createAuth0Client({
   
     // Assumes an element with id "profile" in the DOM
     const profileElement = document.getElementById("profile");
-    const scheduleElement = document.querySelectorAll("schedule");
+    const scheduleElement = document.querySelectorAll(".schedule");
   
     if (isAuthenticated) {
       profileElement.style.display = "block";
