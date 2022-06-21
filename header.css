@@ -72,10 +72,10 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     font-size: 1.2rem;
 }
 
-#login, #logout {
+#login, #logout, #schedule {
     cursor: pointer;
 }
-#login:hover, #logout {
+#login:hover, #logout:hover, #schedule:hover {
     color: var(--light-green);
 }
 
