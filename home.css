@@ -76,6 +76,12 @@ h1 {
     text-align: center;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, .7);
+    opacity: 1;
+    transition: .6s all ease-in-out;
+}
+header.scrolled .hero p {
+    font-size: 0;
+    opacity: 0;
 }
 .body-logo, .body-logo-link {
     width: 100%;
