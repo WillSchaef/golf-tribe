@@ -146,6 +146,12 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     .authenticated .login, .authenticated .email, .authenticated #logout, .authenticated #schedule {
         padding-left: 0;
     }
+    .leftContent-contact button {
+        color: white !important;
+    }
+    .leftContent-contact button span {
+        color: white !important;
+    }
 }
 .authenticated header:not(.scrolled) .leftContent-contact {
     opacity: 1;
