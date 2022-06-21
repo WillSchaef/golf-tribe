@@ -46,7 +46,7 @@ createAuth0Client({
               <p>${userProfile.name}</p>
             `;
     profileElementMobile.innerHTML = `
-            <li>${userProfile.name}</li>
+            ${userProfile.name}
           `;
   } else {
     profileElement.style.display = "none";
