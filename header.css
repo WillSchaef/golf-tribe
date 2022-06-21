@@ -75,6 +75,9 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 #profile img {
     display: none !important;
 }
+#profile p {
+    font-size: 1rem;
+}
 
 @media (min-width: 1200px) {
     .header-leftContent, .header-rightContent {
