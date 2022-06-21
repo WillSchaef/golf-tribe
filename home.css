@@ -79,10 +79,11 @@ h1 {
     opacity: 1;
     transition: .6s all ease-in-out;
 }
-section.s-scrolled .hero p {
-    font-size: 0;
+.hero.s-scrolled p {
+    font-size: 0rem;
     opacity: 0;
 }
+
 .body-logo, .body-logo-link {
     width: 100%;
     max-width: 150px;
