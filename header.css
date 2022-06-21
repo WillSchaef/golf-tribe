@@ -5,6 +5,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 9999999;
+    min-height: 80px;
 }
 .subpage header {
     position: sticky;
@@ -120,6 +121,13 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
         opacity: 1;
     }
 }
+.authenticated header:not(.scrolled) .leftContent-contact {
+    opacity: 1;
+}
+.authenticated .email {
+    opacity: 1;
+}
+
 header.scrolled .login, header.scrolled .email {
     opacity: 1;
 }
@@ -369,7 +377,6 @@ header:not(.scrolled) .logo-nav-item {
     justify-content: flex-end;
     align-items: center;
 }
-
 #profile p {
     font-size: .8rem;
     margin-right: 20px;
@@ -380,6 +387,13 @@ header:not(.scrolled) .logo-nav-item {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 991px) {
+    #profile {
+        display: none !important;
+    }
+}
+
 .fa-facebook-f {
     background-color: rgb(66, 103, 178);
     padding-left: 11px;
