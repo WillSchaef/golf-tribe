@@ -97,6 +97,9 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 .address, .login, .email {
     padding: 0px 15px;
     white-space: nowrap;
+    background: transparent;
+    color: white;
+    border: none;
 }
 i.fas.fa-envelope {
     transform: translateY(.7px);
