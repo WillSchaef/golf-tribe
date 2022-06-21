@@ -148,6 +148,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     }
     .leftContent-contact button {
         color: white !important;
+        min-width: 100px;
     }
     .leftContent-contact button span {
         color: white !important;
