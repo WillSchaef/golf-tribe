@@ -79,8 +79,14 @@ h1 {
     opacity: 1;
     transition: .6s all ease-in-out;
 }
+@media (max-width: 567px) {
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
 .hero.s-scrolled p {
-    font-size: 0rem;
+    font-size: 0rem !important;
     opacity: 0;
 }
 
