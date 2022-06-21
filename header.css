@@ -94,10 +94,21 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 .leftContent-contact i {
     margin-right: 7px; 
 }
-.address, .login, .email {
+.address, .login, .email, #logout, #schedule {
     padding: 0px 15px;
     white-space: nowrap;
+    background: transparent;
+    color: white;
+    border: none;
 }
+
+#login, #logout, #schedule {
+    cursor: pointer;
+}
+#login:hover, #logout:hover, #schedule:hover {
+    color: var(--light-green);
+}
+
 i.fas.fa-envelope {
     transform: translateY(.7px);
 }
@@ -334,6 +345,19 @@ header:not(.scrolled) .logo-nav-item {
     justify-content: flex-end;
     align-items: center;
 }
+
+#profile p {
+    font-size: .8rem;
+    margin-right: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s ease-in-out;
+}
+header.scrolled #profile p {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .social-media {
     display: flex;
     justify-content: center;
