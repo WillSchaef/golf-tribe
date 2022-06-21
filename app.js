@@ -34,6 +34,7 @@ createAuth0Client({
     const scheduleElement = document.getElementById("schedule");
   
     if (isAuthenticated) {
+      document.body.classList.add('authenticated');
       profileElement.style.display = "block";
       loginButton.style.display = "none";
       logoutButton.style.display = "block";
@@ -46,5 +47,6 @@ createAuth0Client({
       loginButton.style.display = "block";
       logoutButton.style.display = "none";
       scheduleElement.style.display = "none";
+      document.body.classList.remove('authenticated');
     }
   });

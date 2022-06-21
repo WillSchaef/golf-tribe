@@ -110,6 +110,20 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     border: none;
 }
 
+.login, .email {
+    opacity: 0;
+    transition: .7s all ease-in-out;
+}
+
+@media (max-width: 991px) {
+    .login {
+        opacity: 1;
+    }
+}
+header.scrolled .login, header.scrolled .email {
+    opacity: 1;
+}
+
 #login, #logout, #schedule {
     cursor: pointer;
 }
@@ -138,10 +152,6 @@ i.fas.fa-envelope {
 
 header:not(.scrolled) .leftContent-contact {
     opacity: 0;
-    transition: all .7s ease-in-out;
-}
-header.scrolled .leftContent-contact, .subpage header .leftContent-contact {
-    opacity: 1;
     transition: all .7s ease-in-out;
 }
 .nav {
@@ -363,75 +373,12 @@ header:not(.scrolled) .logo-nav-item {
 #profile p {
     font-size: .8rem;
     margin-right: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .6s ease-in-out;
-}
-header.scrolled #profile p {
-    opacity: 1;
-    pointer-events: all;
 }
 
 @media (min-width: 1200px) {
     #profile p {
         font-size: 1rem;
     }
-}
-
-.social-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 5px;
-    height: 100%;
-}
-header:not(.scrolled) .social-media {
-    pointer-events: none;
-}
-header.scrolled .social-media {
-    pointer-events: visible;
-}
-.social-media-inner {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: flex-end;
-}
-.social-media-inner div:is(.facebook, .instagram, .youtube, .twitter, .linkedin) {
-    opacity: .8;
-    transition: opacity .3s ease;
-}
-.social-media-inner div:is(.facebook, .instagram, .youtube, .twitter, .linkedin):hover {
-    opacity: 1;
-    transition: opacity .3s ease;
-}
-.social-media-inner .fab, footer .fab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    font-size: 20px;
-    width: 35px;
-    height: 35px;
-    color: var(--light-color);
-    margin: auto;
-    margin-right: 5px;
-    border-radius: 50px;
-    opacity: .5;
-    text-shadow: 3px 3px 5px rgba(44, 44, 44, 0.8);
-}
-.social-media-inner .fab {
-    margin-right: 5px;
-}
-header:not(.scrolled) .social-media-inner .fab {
-    opacity: 0;
-}
-header.scrolled .social-media-inner .fab {
-    opacity: .75;
-}
-header.scrolled .social-media-inner .fab:hover {
-    opacity: .95;
-    transition: all .2s ease;
 }
 .fa-facebook-f {
     background-color: rgb(66, 103, 178);
@@ -444,10 +391,6 @@ header.scrolled .social-media-inner .fab:hover {
     background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
     transition: all 1.25s ease;
-    padding-left: 11px;
-}
-.social-media-inner .fa-instagram {
-    font-size: 22px;
     padding-left: 11px;
 }
 .fa-youtube {
