@@ -609,8 +609,8 @@ body:not(.subpage) header:not(.scrolled) #menuToggle input:checked ~ ul {
 
 
 #profileMobile {
-    font-size: .8rem;
-    padding-bottom: 10px;
+    font-size: .8rem !important;
+    padding-bottom: 10px !important;
 }
 
 @media (min-width: 992px) {
