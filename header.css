@@ -82,7 +82,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     height: 100%;
     color: var(--light-color);
 }
-.leftContent-contact p {
+.leftContent-contact p, .leftContent-contact button {
     font-size: 1rem;
 }
 
@@ -109,7 +109,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
         display: flex;
         align-items: center;
     }
-    .leftContent-contact p {
+    .leftContent-contact p, .leftContent-contact button {
         font-size: 1.2rem;
     }
     .member {
@@ -140,7 +140,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     .email {
         display: none;
     }
-    .authenticated .leftContent-contact p {
+    .authenticated .leftContent-contact p, .authenticated .leftContent-contact button {
         margin: 5px 0;
     }
     .authenticated .login, .authenticated .email, .authenticated #logout, .authenticated #schedule {
