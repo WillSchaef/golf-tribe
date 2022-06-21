@@ -40,3 +40,8 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+// Fade in effect
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.remove('fade-out');
+});
