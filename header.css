@@ -349,6 +349,13 @@ header:not(.scrolled) .logo-nav-item {
 #profile p {
     font-size: .8rem;
     margin-right: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s ease-in-out;
+}
+header.scrolled #profile p {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .social-media {
