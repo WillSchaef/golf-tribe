@@ -628,3 +628,19 @@ body:not(.subpage) header:not(.scrolled) #menuToggle input:checked ~ ul {
         display: none !important
     }
 }
+
+footer .fab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    color: var(--light-color);
+    margin: auto;
+    margin-right: 5px;
+    border-radius: 50px;
+    opacity: .5;
+    text-shadow: 3px 3px 5px rgba(44, 44, 44, 0.8);
+}
