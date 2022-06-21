@@ -44,6 +44,7 @@ header:not(.scrolled) .header-overlay {
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
+    min-height: 80px;
 }
 
 @media (min-width: 992px) {
@@ -601,4 +602,10 @@ header.scrolled .bottom, .subpage header .bottom {
 body:not(.subpage) header:not(.scrolled) #menuToggle input:checked ~ ul {
     right: -45%;
     transition: right 1s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+@media (min-width: 992px) {
+    #profileMobile {
+        display: none !important
+    }
 }
