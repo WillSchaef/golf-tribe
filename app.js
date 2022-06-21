@@ -31,11 +31,13 @@ createAuth0Client({
   
     // Assumes an element with id "profile" in the DOM
     const profileElement = document.getElementById("profile");
+    const scheduleElement = document.querySelectorAll("schedule");
   
     if (isAuthenticated) {
       profileElement.style.display = "block";
       loginButton.style.display = "none";
       logoutButton.style.display = "block";
+      scheduleElement.style.display = "block";
       profileElement.innerHTML = `
               <p>${userProfile.name}</p>
             `;
@@ -43,5 +45,6 @@ createAuth0Client({
       profileElement.style.display = "none";
       loginButton.style.display = "block";
       logoutButton.style.display = "none";
+      scheduleElement.style.display = "none";
     }
   });

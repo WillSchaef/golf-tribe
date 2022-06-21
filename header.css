@@ -71,9 +71,12 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 .leftContent-contact p {
     font-size: 1.2rem;
 }
-#profile p {
-    font-size: .8rem;
-    margin-right: 10px;
+
+#login {
+    cursor: pointer;
+}
+#login:hover {
+    color: var(--light-green);
 }
 
 @media (min-width: 1200px) {
@@ -98,7 +101,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 .leftContent-contact i {
     margin-right: 7px; 
 }
-.address, .login, .email {
+.address, .login, .email, #logout {
     padding: 0px 15px;
     white-space: nowrap;
     background: transparent;
@@ -341,6 +344,12 @@ header:not(.scrolled) .logo-nav-item {
     justify-content: flex-end;
     align-items: center;
 }
+
+#profile p {
+    font-size: .8rem;
+    margin-right: 10px;
+}
+
 .social-media {
     display: flex;
     justify-content: center;
