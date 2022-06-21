@@ -575,7 +575,7 @@ header.scrolled .bottom, .subpage header .bottom {
     transition: right 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 #menu li {
-    padding: 15px 35px;
+    padding: 15px 25px;
     font-size: 22px;
     color: var(--light-color);
     transition: all .3s ease;
@@ -586,6 +586,9 @@ header.scrolled .bottom, .subpage header .bottom {
     }
     .pricingNav li {
         border-bottom-left-radius: 15px;
+    }
+    #menu li {
+        padding: 15px 35px;
     }
 }
 
@@ -602,6 +605,12 @@ header.scrolled .bottom, .subpage header .bottom {
 body:not(.subpage) header:not(.scrolled) #menuToggle input:checked ~ ul {
     right: -45%;
     transition: right 1s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+#profileMobile {
+    font-size: .8rem;
+    padding-bottom: 10px;
 }
 
 @media (min-width: 992px) {
