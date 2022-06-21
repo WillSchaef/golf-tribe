@@ -72,13 +72,6 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     font-size: 1.2rem;
 }
 
-#login, #logout, #schedule {
-    cursor: pointer;
-}
-#login:hover, #logout:hover, #schedule:hover {
-    color: var(--light-green);
-}
-
 @media (min-width: 1200px) {
     .header-leftContent, .header-rightContent {
         width: 250px;
@@ -108,6 +101,14 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     color: white;
     border: none;
 }
+
+#login, #logout, #schedule {
+    cursor: pointer;
+}
+#login:hover, #logout:hover, #schedule:hover {
+    color: var(--light-green);
+}
+
 i.fas.fa-envelope {
     transform: translateY(.7px);
 }
