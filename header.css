@@ -72,10 +72,10 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     font-size: 1.2rem;
 }
 
-#login {
+#login, #logout {
     cursor: pointer;
 }
-#login:hover {
+#login:hover, #logout {
     color: var(--light-green);
 }
 
@@ -101,7 +101,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 .leftContent-contact i {
     margin-right: 7px; 
 }
-.address, .login, .email, #logout {
+.address, .login, .email, #logout, #schedule {
     padding: 0px 15px;
     white-space: nowrap;
     background: transparent;
