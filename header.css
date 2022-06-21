@@ -67,24 +67,31 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     pointer-events: visible;
     min-height: 78px;
 }
+
 .leftContent-contact {
-    display: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    color: var(--light-color);
 }
 .leftContent-contact p {
     font-size: 1rem;
 }
 
+.member {
+    display: none;
+}
+
+
 @media (min-width: 992px) {
     .header-leftContent, .header-rightContent {
         width: 200px;
     }
-
     .leftContent-contact {
-        display: flex;
         flex-direction: row;
+        justify-content: flex-start;
         align-items: center;
-        height: 100%;
-        color: var(--light-color);
     }
 }
 
@@ -97,6 +104,9 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     }
     .leftContent-contact p {
         font-size: 1.2rem;
+    }
+    .member {
+        display: inline-block;
     }
 }
     
@@ -119,6 +129,9 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 @media (max-width: 991px) {
     .login {
         opacity: 1;
+    }
+    .email {
+        display: none;
     }
 }
 .authenticated header:not(.scrolled) .leftContent-contact {
@@ -382,6 +395,10 @@ header:not(.scrolled) .logo-nav-item {
     margin-right: 20px;
 }
 
+.directionsNav {
+    display: none;
+}
+
 @media (min-width: 1200px) {
     #profile p {
         font-size: 1rem;
@@ -392,7 +409,14 @@ header:not(.scrolled) .logo-nav-item {
     #profile {
         display: none !important;
     }
+    .authenticated .directionsNav {
+        display: block;
+    }
 }
+
+
+
+
 
 .fa-facebook-f {
     background-color: rgb(66, 103, 178);

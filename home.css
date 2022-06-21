@@ -202,15 +202,6 @@ section:not(.s-scrolled) .body-logo-innerBottom p  {
         transform: translateY(-76px);
     }
 }
-
-
-
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .member {
-        display: none;
-    }
-}
 .pt-cards .scroll-content {
     transition-delay: .3s;
 }
