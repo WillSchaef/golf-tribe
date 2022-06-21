@@ -137,8 +137,8 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     .email {
         display: none;
     }
-    .authenticated .leftContent-contact a p {
-        margin: 5px 0;
+    .authenticated .leftContent-contact p {
+        margin: 0;
     }
 }
 .authenticated header:not(.scrolled) .leftContent-contact {
