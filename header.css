@@ -58,6 +58,7 @@ header:not(.scrolled) .header-overlay {
 .header-leftContent {
     width: 33px;
 }
+
 header:not(.scrolled) .header-leftContent {
     pointer-events: none;
 }
@@ -69,7 +70,21 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     display: none;
 }
 .leftContent-contact p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+    .header-leftContent, .header-rightContent {
+        width: 200px;
+    }
+
+    .leftContent-contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        color: var(--light-color);
+    }
 }
 
 @media (min-width: 1200px) {
@@ -79,15 +94,8 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
         display: flex;
         align-items: center;
     }
-}
-
-@media (min-width: 992px) {
-    .leftContent-contact {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 100%;
-        color: var(--light-color);
+    .leftContent-contact p {
+        font-size: 1.2rem;
     }
 }
     
@@ -95,7 +103,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     margin-right: 7px; 
 }
 .address, .login, .email, #logout, #schedule {
-    padding: 0px 15px;
+    padding: 0px 10px;
     white-space: nowrap;
     background: transparent;
     color: white;
@@ -119,6 +127,12 @@ i.fas.fa-envelope {
 @media (min-width: 992px) {
     .address {
         display: inline-block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .address, .login, .email, #logout, #schedule {
+        padding: 0px 15px;
     }
 }
 
@@ -348,14 +362,20 @@ header:not(.scrolled) .logo-nav-item {
 
 #profile p {
     font-size: .8rem;
-    margin-right: 10px;
+    margin-right: 20px;
     opacity: 0;
     pointer-events: none;
-    transition: all .4s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 header.scrolled #profile p {
     opacity: 1;
     pointer-events: all;
+}
+
+@media (min-width: 1200px) {
+    #profile p {
+        font-size: 1rem;
+    }
 }
 
 .social-media {
