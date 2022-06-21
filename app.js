@@ -35,7 +35,7 @@ createAuth0Client({
     if (isAuthenticated) {
       profileElement.style.display = "block";
       loginButton.style.display = "none";
-      loginButton.style.display = "block";
+      logoutButton.style.display = "block";
       profileElement.innerHTML = `
               <p>${userProfile.name}</p>
             `;
