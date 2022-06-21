@@ -67,6 +67,10 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     pointer-events: visible;
     min-height: 78px;
 }
+.authenticated header:not(.scrolled) .header-leftContent {
+    pointer-events: all;
+}
+
 
 .leftContent-contact {
     display: flex;
@@ -123,7 +127,7 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
 
 .login, .email {
     opacity: 0;
-    transition: .7s all ease-in-out;
+    transition: .7s opacity ease-in-out;
 }
 
 @media (max-width: 991px) {
@@ -132,6 +136,9 @@ header.scrolled .header-leftContent, .subpage header .header-leftContent {
     }
     .email {
         display: none;
+    }
+    .authenticated .leftContent-contact a p {
+        margin: 5px 0;
     }
 }
 .authenticated header:not(.scrolled) .leftContent-contact {
