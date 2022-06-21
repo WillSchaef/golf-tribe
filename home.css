@@ -79,7 +79,7 @@ h1 {
     opacity: 1;
     transition: .6s all ease-in-out;
 }
-header.scrolled .hero p {
+section.s-scrolled .hero p {
     font-size: 0;
     opacity: 0;
 }
