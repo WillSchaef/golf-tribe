@@ -9,7 +9,6 @@ createAuth0Client({
     loginButton.addEventListener("click", (e) => {
       e.preventDefault();
       auth0.loginWithRedirect();
-      console.log('test')
     });
   
     if (location.search.includes("state=") && 
@@ -35,11 +34,14 @@ createAuth0Client({
   
     if (isAuthenticated) {
       profileElement.style.display = "block";
+      loginButton.style.display = "none";
+      loginButton.style.display = "block";
       profileElement.innerHTML = `
               <p>${userProfile.name}</p>
-              <img src="${userProfile.picture}" />
             `;
     } else {
       profileElement.style.display = "none";
+      loginButton.style.display = "block";
+      logoutButton.style.display = "none";
     }
   });
