@@ -612,7 +612,9 @@ body:not(.subpage) header:not(.scrolled) #menuToggle input:checked ~ ul {
     font-size: .8rem !important;
     padding-bottom: 10px !important;
 }
-
+#profileMobile:hover {
+    background-color: transparent !important;
+}
 @media (min-width: 992px) {
     #profileMobile {
         display: none !important
